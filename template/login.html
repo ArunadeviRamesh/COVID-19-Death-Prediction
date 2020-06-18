@@ -1,0 +1,128 @@
+<html>  
+<head>  
+    <title>login</title>  
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>  
+<body>  
+<style>
+	body {
+    font-family: "Lato", sans-serif;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 750px) {
+    .login-form{
+        margin-top: 10%;
+        width:650px;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+        width:550px;
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 5%;
+    padding: 40px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+</style>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="sidenav">
+         <div class="login-main-text">
+                       <h2>If you are give a Cumulative number of confirmed cases, It will predict Cumulative Number of death in Next day may occur for COVID-19 </h2>
+            <h3>Choose anyone country given below to check death</h3>
+            <p> 1.Italy<br> 2. United States<br> 3. Spain<br> 4. India<br>5. United Kingdom<br>6. World</p>
+         </div>
+      </div>
+      <div class="main">
+      	<h1>COVID-19 Death prediction Using Machine Learning<br></h1>
+
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form method = "post" action = "http://127.0.0.1:5000/validate">  
+    
+                  <div class="form-group">
+           
+                     <label>Select the country Name:</label><br>
+
+                     <select name = "coun">
+            <option value = "United Kingdom" selected>United Kingdom</option>
+            <option value = "United States">United States</option>
+            <option value = "Spain">Spain</option>
+         <option value = "India">India</option>
+            <option value = "Italy">Italy</option>
+            <option value = "World">World</option>
+         
+         </select>
+</div><br>
+                  <div class="form-group">
+                     <label>Enter the confirmed cases</label><br>
+                     <input type="number" class="form-control" name="confir">
+                  </div><br>
+                  <button type="submit" class="btn btn-white">Checking........</button>
+                  </form>
+            </di
+         </div>
+      </div>
+      </body>
+      </html>
